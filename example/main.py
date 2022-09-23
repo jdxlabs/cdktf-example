@@ -13,7 +13,7 @@ class MyStack(TerraformStack):
 
         AwsProvider(self, "AWS", region="eu-west-1")
 
-        bucket = s3.S3Bucket(self, "cdktf-test",
+        bucket = s3.S3Bucket(self, "cdktf-example",
                              bucket=BUCKET_NAME)
 
         TerraformOutput(self, "s3_arn",
@@ -22,11 +22,11 @@ class MyStack(TerraformStack):
 
 
 app = App()
-stack = MyStack(app, "cdktf_test")
+stack = MyStack(app, "cdktf_example")
 RemoteBackend(stack,
               hostname='app.terraform.io',
               organization=TFCLOUD_ORGA,
-              workspaces=NamedRemoteWorkspace('test_cdktf')
+              workspaces=NamedRemoteWorkspace('cdktf_example')
               )
 
 app.synth()
