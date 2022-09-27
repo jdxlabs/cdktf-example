@@ -5,4 +5,4 @@ Example of CDKTF usage
 https://developer.hashicorp.com/terraform/cdktf
 
 ## Article linked to this repo
-https://dev.to/jdxlabs/lets-try-cdktf-with-python-522h
+https://dev.to/jdxlabs/lets-try-cdktf-with-python-48a9
